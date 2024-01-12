@@ -24,13 +24,13 @@ yolo task=detect mode=predict model=yolov8n.pt source=image1.jpg save_txt=True s
 yolo task=detect mode=predict model=yolov8n.pt source=image1.jpg hide_labels=True hide_conf=True
 yolo task=detect mode=predict model=yolov8n.pt source=demo.mp4 hide_labels=True hide_conf=True
 
-# command for image detection--semantic segmentation
+# command for image/video--semantic segmentation
 yolo task=segment mode=predict model=yolov8n-seg.pt source=image1.jpg 
+yolo task=segment mode=predict model=yolov8n-seg.pt source=demo.mp4
 
-
-# command for image detection--semantic segmentation with hide labels and confidence score
+# command for image/video detection--semantic segmentation with hide labels and confidence score
 yolo task=segment mode=predict model=yolov8n-seg.pt source=image1.jpg hide_labels=True hide_conf=True
-
+yolo task=segment mode=predict model=yolov8n-seg.pt source=demo.mp4 hide_labels=True hide_conf=True
 
 # command for image detection--classification
 <!-- yolo task=segment mode=predict model=yolov8n-cls.pt source=image1.jpg  --> not sure
